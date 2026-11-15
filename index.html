@@ -60,7 +60,8 @@
   footer{color:var(--muted);font-size:13px;padding:30px 0 50px;border-top:1px solid var(--line);margin-top:40px}
   .fees{width:100%;border-collapse:collapse;margin:10px 0;font-size:15px}
   .fees td{padding:8px 0;border-bottom:1px solid var(--line);vertical-align:top}
-  .fees td:last-child{text-align:right;white-space:nowrap;font-weight:600;padding-left:16px}
+  .fees td:last-child{text-align:right;font-weight:600;padding-left:16px}
+  @media (max-width:600px){ .fees td{display:block;border:0;padding:2px 0} .fees td:last-child{text-align:left;padding:0 0 10px;border-bottom:1px solid var(--line)} }
   .empty{color:var(--muted);font-style:italic}
   mark{background:var(--warn-bg);color:inherit;border-radius:3px}
 </style>
@@ -135,7 +136,7 @@ function card(it){
   return `<article class="item" data-text="${esc(fold([it.title,it.what,it.note,it.source,...(it.fees||[]).flat()].join(" ")))}">
     <h3>${esc(it.title)}</h3>
     <p>${esc(it.what)}</p>
-    ${it.fees ? `<table class="fees">${it.fees.map(f=>`<tr><td>${esc(f[0])}</td><td>${esc(f[1])}</td></tr>`).join("")}</table>` : ""}
+    ${it.fees ? `<table class="fees">${it.fees.map(f=>`<tr><td>${esc(f[0])}</td><td>${/^[^\s@]+@[^\s@]+$/.test(f[1]) ? `<a href="mailto:${esc(f[1])}">${esc(f[1])}</a>` : /^\d{4}\.\d{3}\.\d{3}$/.test(f[1]) ? `<a href="tel:${esc(f[1].replace(/\./g,""))}">${esc(f[1])}</a>` : esc(f[1])}</td></tr>`).join("")}</table>` : ""}
     ${it.note ? `<p class="note">${esc(it.note)}</p>` : ""}
     <div class="meta">
       <span class="badge b-${esc(it.status)}" title="${esc(label)}">${esc(shortLabel)}</span>

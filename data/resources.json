@@ -336,20 +336,54 @@
       "watch": true,
       "watch_section": [
         "TAXE PROFESIONALE",
-        "INFORMAȚII PRIVIND ACHIZIȚIONAREA"
+        "INFORMAȚII FINANCIARE"
       ]
     },
     {
       "id": "taxe-plata",
       "section": "taxe",
-      "title": "Cum plătești",
-      "what": "CIF Colegiul Psihologilor din România: 18102208. Poți plăti în oricare dintre cele două conturi: RO46 RZBR 0000 0600 1635 0758 (Raiffeisen Bank, Agenția Brâncoveanu) sau RO50 BREL 0002 0001 6813 0100 (Libra Internet Bank). Dovada plății cotizației anuale se trimite scanată sau fotografiată pe adresa indicată pe pagina oficială.",
+      "title": "Informații financiare – cum plătești și cui scrii",
+      "what": "Poți plăti în oricare dintre cele două conturi.",
       "url": "https://www.copsi.ro/index.php/taxe-profesionale#:~:text=INFORMA%C8%9AII%20FINANCIARE",
       "source": "copsi.ro – Taxe profesionale",
       "status": "oficial",
-      "note": "Înainte de orice plată, verifică IBAN-ul pe pagina oficială. Pagina nu spune ce să scrii la detaliile plății: întreabă la contactul financiar afișat acolo.",
+      "note": "Înainte de orice plată, verifică IBAN-ul pe pagina oficială. Pagina nu spune ce să scrii la detaliile plății: întreabă la contactul de mai sus.",
       "verified": "2026-11-15",
-      "watch": false
+      "watch": true,
+      "fees": [
+        [
+          "Cod de Înregistrare Fiscală (CIF)",
+          "18102208"
+        ],
+        [
+          "IBAN Raiffeisen Bank, Agenția Brâncoveanu",
+          "RO46 RZBR 0000 0600 1635 0758"
+        ],
+        [
+          "IBAN Libra Internet Bank",
+          "RO50 BREL 0002 0001 6813 0100"
+        ],
+        [
+          "Persoană de contact",
+          "Aurelia Marin"
+        ],
+        [
+          "Telefon (luni–vineri, 09:00–13:00)",
+          "0746.734.678"
+        ],
+        [
+          "Factură fiscală: trimiți datele de facturare la",
+          "contabilitate@copsi.ro"
+        ],
+        [
+          "Confirmare plată cotizație anuală: trimiți copia scanată sau poza dovezii de plată la",
+          "taxeprofesionale@copsi.ro"
+        ]
+      ],
+      "watch_section": [
+        "INFORMAȚII FINANCIARE",
+        "INFORMAȚII PRIVIND ACHIZIȚIONAREA"
+      ]
     },
     {
       "id": "cotizatie-suspendare",
