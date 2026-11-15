@@ -166,6 +166,12 @@ def check_sources(resources, status):
                            f"Linkul nu mai răspunde ({resp.status_code}).\n\n{url}\n\nVerifică dacă documentul a fost mutat sau înlocuit.")
             continue
         text, raw_hash = to_text(resp)
+        if text and item.get("watch_section"):  # urmărim doar porțiunea relevantă a paginii
+            start, end = item["watch_section"]
+            i = text.find(start)
+            j = text.find(end, i + 1) if i >= 0 else -1
+            if i >= 0:
+                text = text[i:j] if j > i else text[i:]
         digest = raw_hash or hashlib.sha256(normalize(text).encode()).hexdigest()
         snap = SNAP / f"{iid}.txt"
         old_text = snap.read_text(encoding="utf-8") if snap.exists() else None

@@ -8,13 +8,48 @@
     "lipsa": "Link oficial încă negăsit"
   },
   "sections": [
-    {"id": "alp", "title": "Obținere ALP", "subtitle": "Dosar, etape, interviu", "icon": "📄"},
-    {"id": "autonomie", "title": "Supervizare & autonomie", "subtitle": "Trecerea de la supervizare la autonom", "icon": "🧭"},
-    {"id": "cabinet", "title": "Înființare cabinet", "subtitle": "Acte, spațiu, înregistrare", "icon": "🏠"},
-    {"id": "legislatie", "title": "Legislație", "subtitle": "Lege, norme, cod deontologic", "icon": "⚖️"},
-    {"id": "registre", "title": "Registre", "subtitle": "RUP, supervizori, experți", "icon": "📚"},
-    {"id": "taxe", "title": "Taxe & cotizații", "subtitle": "Ce plătești și unde verifici", "icon": "💳"},
-    {"id": "contact", "title": "Contact CPR", "subtitle": "Adrese oficiale", "icon": "✉️"}
+    {
+      "id": "alp",
+      "title": "Obținere ALP",
+      "subtitle": "Dosar, etape, interviu",
+      "icon": "📄"
+    },
+    {
+      "id": "autonomie",
+      "title": "Supervizare & autonomie",
+      "subtitle": "Trecerea de la supervizare la autonom",
+      "icon": "🧭"
+    },
+    {
+      "id": "cabinet",
+      "title": "Înființare cabinet",
+      "subtitle": "Acte, spațiu, înregistrare",
+      "icon": "🏠"
+    },
+    {
+      "id": "legislatie",
+      "title": "Legislație",
+      "subtitle": "Lege, norme, cod deontologic",
+      "icon": "⚖️"
+    },
+    {
+      "id": "registre",
+      "title": "Registre",
+      "subtitle": "RUP, supervizori, experți",
+      "icon": "📚"
+    },
+    {
+      "id": "taxe",
+      "title": "Taxe & cotizații",
+      "subtitle": "Ce plătești și unde verifici",
+      "icon": "💳"
+    },
+    {
+      "id": "contact",
+      "title": "Contact CPR",
+      "subtitle": "Adrese oficiale",
+      "icon": "✉️"
+    }
   ],
   "items": [
     {
@@ -259,14 +294,60 @@
       "watch": false
     },
     {
-      "id": "taxe-sectiune",
+      "id": "taxe-profesionale",
       "section": "taxe",
-      "title": "Taxe profesionale – secțiunea oficială CPR",
-      "what": "Fiecare dosar cere dovada achitării taxei profesionale pentru analiza dosarului. Documentele CPR trimit pentru sume la secțiunea „Taxe profesionale” de pe copsi.ro.",
-      "url": "https://www.copsi.ro/index.php",
-      "source": "copsi.ro",
-      "status": "lipsa",
-      "note": "Sumele nu sunt trecute aici intenționat. Le adaug doar după ce le verific pe pagina oficială, cu data de la care se aplică.",
+      "title": "Taxe profesionale CPR – cele care te privesc la început",
+      "what": "Valorile afișate pe pagina oficială „Taxe profesionale”, stabilite prin Hotărârea Consiliului CPR nr. 2/2013 (Monitorul Oficial nr. 714/20.11.2013) și Hotărârea nr. 1/2016 (Monitorul Oficial nr. 141/24.02.2016).",
+      "fees": [
+        [
+          "Analiză dosar + interviu/examen pentru ALP într-o specialitate",
+          "300 lei"
+        ],
+        [
+          "Aceeași taxă pentru absolvenții de cel mult 6 luni de la examenul de licență, persoanele cu grad de handicap și foștii deținuți politici",
+          "150 lei"
+        ],
+        [
+          "Cotizația anuală",
+          "250 lei / an"
+        ],
+        [
+          "Certificat de înregistrare a formei independente de exercitare (de ex. cabinet individual)",
+          "300 lei"
+        ],
+        [
+          "Mențiune pe certificat, cu înlocuirea anexei (de ex. punct de lucru nou)",
+          "150 lei"
+        ],
+        [
+          "Mențiune cu înlocuirea certificatului și a anexei (în afară de schimbările de date din actul de identitate)",
+          "300 lei"
+        ],
+        [
+          "Dreptul de a exercita supervizare profesională într-o specialitate (pentru supervizori)",
+          "500 lei / 5 ani"
+        ]
+      ],
+      "url": "https://www.copsi.ro/index.php/taxe-profesionale#:~:text=TAXE%20PROFESIONALE",
+      "source": "copsi.ro – Taxe profesionale",
+      "status": "oficial",
+      "note": "Linkul sare direct la tabelul de taxe (în Chrome, Edge și Safari). Pe pagină sunt și taxele pentru furnizori de formare și avizarea testelor.",
+      "verified": "2026-11-15",
+      "watch": true,
+      "watch_section": [
+        "TAXE PROFESIONALE",
+        "INFORMAȚII PRIVIND ACHIZIȚIONAREA"
+      ]
+    },
+    {
+      "id": "taxe-plata",
+      "section": "taxe",
+      "title": "Cum plătești",
+      "what": "CIF Colegiul Psihologilor din România: 18102208. Poți plăti în oricare dintre cele două conturi: RO46 RZBR 0000 0600 1635 0758 (Raiffeisen Bank, Agenția Brâncoveanu) sau RO50 BREL 0002 0001 6813 0100 (Libra Internet Bank). Dovada plății cotizației anuale se trimite scanată sau fotografiată pe adresa indicată pe pagina oficială.",
+      "url": "https://www.copsi.ro/index.php/taxe-profesionale#:~:text=INFORMA%C8%9AII%20FINANCIARE",
+      "source": "copsi.ro – Taxe profesionale",
+      "status": "oficial",
+      "note": "Înainte de orice plată, verifică IBAN-ul pe pagina oficială. Pagina nu spune ce să scrii la detaliile plății: întreabă la contactul financiar afișat acolo.",
       "verified": "2026-11-15",
       "watch": false
     },
@@ -295,15 +376,45 @@
     }
   ],
   "journey": [
-    {"id": "j-alp", "label": "Am obținut ALP – practicant în supervizare"},
-    {"id": "j-contract", "label": "Am înregistrat contractul de supervizare la CPR"},
-    {"id": "j-spatiu", "label": "Am actele pentru spațiu (proprietate, închiriere sau comodat) și schița cu suprafețele"},
-    {"id": "j-act", "label": "Am completat actul constitutiv al cabinetului"},
-    {"id": "j-taxa", "label": "Am plătit taxa de analiză a dosarului de cabinet"},
-    {"id": "j-dosar", "label": "Am depus dosarul pentru cabinetul individual"},
-    {"id": "j-certificat", "label": "Am primit certificatul de înregistrare al cabinetului"},
-    {"id": "j-fiscal", "label": "Am înregistrat cabinetul la ANAF"},
-    {"id": "j-teste", "label": "Am achiziționat testele psihologice necesare"},
-    {"id": "j-autonom", "label": "Am pregătit dosarul pentru trecerea la autonom"}
+    {
+      "id": "j-alp",
+      "label": "Am obținut ALP – practicant în supervizare"
+    },
+    {
+      "id": "j-contract",
+      "label": "Am înregistrat contractul de supervizare la CPR"
+    },
+    {
+      "id": "j-spatiu",
+      "label": "Am actele pentru spațiu (proprietate, închiriere sau comodat) și schița cu suprafețele"
+    },
+    {
+      "id": "j-act",
+      "label": "Am completat actul constitutiv al cabinetului"
+    },
+    {
+      "id": "j-taxa",
+      "label": "Am plătit taxa de analiză a dosarului de cabinet"
+    },
+    {
+      "id": "j-dosar",
+      "label": "Am depus dosarul pentru cabinetul individual"
+    },
+    {
+      "id": "j-certificat",
+      "label": "Am primit certificatul de înregistrare al cabinetului"
+    },
+    {
+      "id": "j-fiscal",
+      "label": "Am înregistrat cabinetul la ANAF"
+    },
+    {
+      "id": "j-teste",
+      "label": "Am achiziționat testele psihologice necesare"
+    },
+    {
+      "id": "j-autonom",
+      "label": "Am pregătit dosarul pentru trecerea la autonom"
+    }
   ]
 }
