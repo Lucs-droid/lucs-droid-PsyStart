@@ -15,6 +15,7 @@ import json
 import os
 import re
 import sys
+import time
 from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
@@ -25,7 +26,8 @@ import requests
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT / "data"
 SNAP = ROOT / "state" / "snapshots"
-UA = "PsiStart-monitor/1.0 (ghid independent; verificare zilnica)"
+UA = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) "
+      "Chrome/124.0 Safari/537.36 PsiStart-monitor/1.1")
 NOW = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 COPSI_HOME = "https://www.copsi.ro/index.php"
 
@@ -86,8 +88,15 @@ def normalize(text):
     return re.sub(r"\s+", " ", text).strip()
 
 
-def fetch(url):
-    return requests.get(url, headers={"User-Agent": UA}, timeout=60)
+def fetch(url, tries=3):
+    last = None
+    for i in range(tries):
+        try:
+            return requests.get(url, headers={"User-Agent": UA, "Accept-Language": "ro-RO,ro;q=0.9"}, timeout=60)
+        except Exception as e:  # unele portaluri închid conexiunea serverelor automate
+            last = e
+            time.sleep(5 * (i + 1))
+    raise last
 
 
 def summarize(title, old, new):
@@ -141,7 +150,12 @@ def check_sources(resources, status):
         try:
             resp = fetch(url)
         except Exception as e:
-            entry.update(state="eroare", error=str(e)[:200])
+            # serverul a refuzat robotul: NU înseamnă că linkul e stricat
+            entry.update(state="neverificat", error=str(e)[:200])
+            status["items"][iid] = entry
+            continue
+        if resp.status_code in (403, 429, 503):
+            entry.update(state="neverificat", error=f"HTTP {resp.status_code}")
             status["items"][iid] = entry
             continue
         if resp.status_code != 200:
@@ -184,11 +198,15 @@ def check_news():
         return False
     p = TextAndLinks()
     p.feed(resp.text)
+    save(ROOT / "state" / "copsi_home_links.json",
+         [{"href": urljoin(COPSI_HOME, h), "text": t[:120]} for h, t in p.links])
     first_run = not news["seen"]
     seen = set(news["seen"])
     for href, label in p.links:
         full = urljoin(COPSI_HOME, href)
-        if not re.search(r"\.(pdf|docx?|xlsx?)($|\?)", full, re.I) or full in seen:
+        is_doc = re.search(r"\.(pdf|docx?|xlsx?)($|\?)", full, re.I)
+        is_article = "copsi.ro" in full and re.search(r"view=article|/index\.php/[^#]+", full)
+        if not (is_doc or is_article) or full in seen:
             continue
         seen.add(full)
         if not first_run:  # la prima rulare doar reținem ce există deja

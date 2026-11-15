@@ -121,6 +121,7 @@ function autoLine(id){
   const s = STATUS.items?.[id];
   if(!s) return "";
   if(s.state === "eroare") return `<span class="auto-err">⚠ Link indisponibil la ultima verificare</span>`;
+  if(s.state === "neverificat") return `<span class="note">○ Serverul sursei nu a răspuns robotului – deschide linkul manual</span>`;
   if(s.state === "modificat") return `<span class="auto-mod">● Documentul s-a modificat (${fmt(s.changed_at)}) – fișa trebuie reverificată</span>`;
   return `<span class="auto-ok">✓ Verificat automat ${fmt(s.checked_at)}</span>`;
 }
