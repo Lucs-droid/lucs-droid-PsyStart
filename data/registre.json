@@ -1,0 +1,8 @@
+{
+  "rup1": {"url": "https://www.copsi.ro/images/RUP_Partea_I_-_Atestate_de_liberă_practică-02.11.2026.xlsx", "date": "02.11.2026", "found_at": "2026-11-15T13:40:00Z"},
+  "rup2": {"url": "https://www.copsi.ro/images/R.U.P._PARTEA_II_-_FORME_DE_EXERCITARE_12.10.2026.xlsx", "date": "12.10.2026", "found_at": "2026-11-15T13:40:00Z"},
+  "supervizori": {"url": "https://www.copsi.ro/images/registrul_unic/Site_Registrul_supervizorilor_-_actualizat_la_data_de_28.10.2026.xlsx", "date": "28.10.2026", "found_at": "2026-11-15T13:40:00Z"},
+  "contracte": {"url": "https://www.copsi.ro/images/Contracte_de_supervizare_perioada_2006-05-11-2026.xlsx", "date": "05.11.2026", "found_at": "2026-11-15T13:40:00Z"},
+  "experti": {"url": "https://www.copsi.ro/images/files/dosare/Registrul_expertilor_psihologi_-_actualizat_la_data_de_19.10.2026.xlsx", "date": "19.10.2026", "found_at": "2026-11-15T13:40:00Z"},
+  "tsa": {"url": "https://www.copsi.ro/images/Registrul_TSA_-_actualizat_la_data_de_10.11.2026.xlsx", "date": "10.11.2026", "found_at": "2026-11-15T13:40:00Z"}
+}

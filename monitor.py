@@ -224,6 +224,40 @@ def check_news():
     return True
 
 
+REGISTERS = {  # cheie -> fragmente care trebuie să apară în numele fișierului
+    "rup1": ["rup_partea_i_"],
+    "rup2": ["partea_ii_-_forme_de_exercitare_1", "partea_ii_-_forme_de_exercitare_0", "partea_ii_-_forme_de_exercitare_2", "partea_ii_-_forme_de_exercitare_3"],
+    "supervizori": ["registrul_supervizorilor"],
+    "contracte": ["contracte_de_supervizare_perioada"],
+    "experti": ["registrul_expertilor"],
+    "tsa": ["registrul_tsa"],
+}
+
+
+def check_registers(page):
+    """Găsește ultima versiune a fiecărui registru (numele fișierelor conțin data)."""
+    path = DATA / "registre.json"
+    reg = load(path, {})
+    try:
+        resp = fetch(page)
+        resp.raise_for_status()
+    except Exception as e:
+        print(f"pagina de registre indisponibilă: {e}")
+        return
+    p = TextAndLinks()
+    p.feed(resp.text)
+    for key, needles in REGISTERS.items():
+        for href, label in p.links:
+            full = urljoin(page, href)
+            low = requests.utils.unquote(full).lower()
+            if any(n in low for n in needles) and re.search(r"\.(xlsx?|pdf)$", low):
+                m = re.findall(r"(\d{2}[.-]\d{2}[.-]\d{4})", low)
+                if reg.get(key, {}).get("url") != full:
+                    reg[key] = {"url": full, "date": m[-1].replace("-", ".") if m else None, "found_at": NOW}
+                break
+    save(path, reg)
+
+
 def main():
     resources = load(DATA / "resources.json", None)
     if not resources:
@@ -231,6 +265,8 @@ def main():
     status = load(DATA / "status.json", {"items": {}})
     check_sources(resources, status)
     status["copsi_reachable"] = check_news()
+    if resources.get("registers_page"):
+        check_registers(resources["registers_page"])
     status["checked_at"] = NOW
     save(DATA / "status.json", status)
     print("Gata.")

@@ -212,6 +212,32 @@
       "watch": true
     },
     {
+      "id": "registre-evidenta-cabinet",
+      "section": "cabinet",
+      "title": "Registrele de evidență ale cabinetului (formulare)",
+      "what": "Modelele de registre publicate de CPR: registrul de evidență a actelor profesionale, a contractelor de prestări servicii psihologice și a corespondenței profesionale.",
+      "url": "https://www.copsi.ro/images/files/formulare/Registrul_de_evidenta_a_actelor_profesionale.pdf",
+      "links": [
+        [
+          "Acte profesionale",
+          "https://www.copsi.ro/images/files/formulare/Registrul_de_evidenta_a_actelor_profesionale.pdf"
+        ],
+        [
+          "Contracte de prestări servicii",
+          "https://www.copsi.ro/images/files/formulare/Registrul_de_evidenta_a_contractelor_de_prestari_servicii_psihologice.pdf"
+        ],
+        [
+          "Corespondență profesională",
+          "https://www.copsi.ro/images/files/formulare/Registrul_de_evidenta_a_corespondentei_profesionale.pdf"
+        ]
+      ],
+      "source": "copsi.ro – Registre",
+      "status": "de-confirmat",
+      "note": "De confirmat dacă ținerea acestor registre e obligatorie pentru cabinetul individual și în ce format.",
+      "verified": "2026-11-15",
+      "watch": false
+    },
+    {
       "id": "legea-213-2004",
       "section": "legislatie",
       "title": "Legea nr. 213/2004 privind exercitarea profesiei de psiholog cu drept de liberă practică",
@@ -274,24 +300,75 @@
       "id": "rup",
       "section": "registre",
       "title": "Registrul unic al psihologilor (RUP)",
-      "what": "Registrul oficial cu toți psihologii cu drept de liberă practică. Aici verifici dacă un psiholog are drept de practică și ce atestat deține.",
-      "url": "https://www.copsi.ro/index.php",
-      "source": "copsi.ro",
-      "status": "lipsa",
-      "note": "Încă nu am linkul direct. Pe copsi.ro îl găsești în secțiunea Registre.",
+      "what": "Registrul oficial al psihologilor cu drept de liberă practică. Partea I: atestatele și cotizațiile achitate. Partea II: formele de exercitare (cabinete, SCPP), inclusiv cele suspendate sau radiate.",
+      "url": "https://www.copsi.ro/index.php/registre",
+      "source": "copsi.ro – Registre",
+      "status": "oficial",
+      "note": "Se descarcă în format Excel. Butonul de mai jos duce mereu la ultima versiune găsită de robot.",
       "verified": "2026-11-15",
-      "watch": false
+      "watch": false,
+      "auto_link": "rup1"
     },
     {
       "id": "registrul-supervizorilor",
       "section": "registre",
       "title": "Registrul supervizorilor",
-      "what": "Conform procedurii CPR, registrul e afișat pe alegericpr.ro, în secțiunea Registre.",
-      "url": "https://www.alegericpr.ro",
-      "source": "alegericpr.ro (CPR)",
-      "status": "de-confirmat",
+      "what": "Lista supervizorilor înscriși, pe specialități. Aici verifici dacă supervizorul tău e în registru.",
+      "url": "https://www.copsi.ro/index.php/registre",
+      "source": "copsi.ro – Registre",
+      "status": "oficial",
       "verified": "2026-11-15",
-      "watch": false
+      "watch": false,
+      "note": null,
+      "auto_link": "supervizori"
+    },
+    {
+      "id": "rup-2",
+      "section": "registre",
+      "title": "RUP Partea II – Forme de exercitare (cabinete, SCPP)",
+      "what": "Aici apare cabinetul tău după înregistrare. Pe pagina de registre găsești și listele separate cu formele suspendate și radiate.",
+      "url": "https://www.copsi.ro/index.php/registre",
+      "source": "copsi.ro – Registre",
+      "status": "oficial",
+      "verified": "2026-11-15",
+      "watch": false,
+      "auto_link": "rup2"
+    },
+    {
+      "id": "contracte-supervizare",
+      "section": "registre",
+      "title": "Contracte de supervizare înregistrate",
+      "what": "Lista contractelor de supervizare înregistrate la CPR. Aici verifici dacă al tău a fost înregistrat.",
+      "url": "https://www.copsi.ro/index.php/registre",
+      "source": "copsi.ro – Registre",
+      "status": "oficial",
+      "verified": "2026-11-15",
+      "watch": false,
+      "auto_link": "contracte"
+    },
+    {
+      "id": "registrul-expertilor",
+      "section": "registre",
+      "title": "Registrul experților psihologi",
+      "what": "Psihologii înscriși ca experți.",
+      "url": "https://www.copsi.ro/index.php/registre",
+      "source": "copsi.ro – Registre",
+      "status": "oficial",
+      "verified": "2026-11-15",
+      "watch": false,
+      "auto_link": "experti"
+    },
+    {
+      "id": "registrul-tsa",
+      "section": "registre",
+      "title": "Registrul TSA",
+      "what": "Registrul furnizorilor de servicii psihologice pentru tulburări din spectrul autist.",
+      "url": "https://www.copsi.ro/index.php/registre",
+      "source": "copsi.ro – Registre",
+      "status": "oficial",
+      "verified": "2026-11-15",
+      "watch": false,
+      "auto_link": "tsa"
     },
     {
       "id": "taxe-profesionale",
@@ -388,13 +465,15 @@
     {
       "id": "cotizatie-suspendare",
       "section": "taxe",
-      "title": "Cotizația anuală – atenție la neplată",
-      "what": "Dreptul de liberă practică se suspendă după 6 luni de neplată nejustificată a cotizației anuale (Legea 213/2004, art. 18).",
-      "url": "https://legislatie.just.ro/Public/DetaliiDocument/52375",
-      "source": "Portal Legislativ",
+      "title": "Cotizația anuală – cât ai de plătit și ce se întâmplă la neplată",
+      "what": "Ca să afli cât ai de achitat, caută-te în RUP Partea I – Atestate de liberă practică. Registrul arată cotizațiile achitate până la data menționată pe pagina de registre. Atenție: după 6 luni de neplată nejustificată a cotizației anuale, dreptul de liberă practică se suspendă (Legea 213/2004, art. 18).",
+      "url": "https://www.copsi.ro/index.php/registre#:~:text=Registrul%20Unic",
+      "source": "copsi.ro – Registre; Legea 213/2004",
       "status": "oficial",
       "verified": "2026-11-15",
-      "watch": false
+      "watch": false,
+      "note": "Caută după nume în fișierul Excel (Ctrl+F). Dacă ai plătit recent, plata poate să nu apară încă: verifică data actualizării registrului.",
+      "auto_link": "rup1"
     },
     {
       "id": "contact-cpr",
@@ -450,5 +529,6 @@
       "id": "j-autonom",
       "label": "Am pregătit dosarul pentru trecerea la autonom"
     }
-  ]
+  ],
+  "registers_page": "https://www.copsi.ro/index.php/registre"
 }

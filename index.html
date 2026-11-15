@@ -49,6 +49,8 @@
   .auto-ok{color:var(--ok)} .auto-mod{color:var(--warn);font-weight:600} .auto-err{color:var(--bad);font-weight:600}
   .btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;border-radius:10px;padding:8px 14px;font-size:14px;font-weight:600}
   @media (prefers-color-scheme: dark){ .btn{color:#10201b} }
+  .btn2{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+  @media (prefers-color-scheme: dark){ .btn2{color:var(--accent)} }
   .journey{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:8px 18px}
   .journey label{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line);cursor:pointer}
   .journey label:last-child{border-bottom:0}
@@ -119,7 +121,7 @@ const store = {
 };
 const fold = s => String(s||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");
 
-let DATA, STATUS = {items:{}};
+let DATA, STATUS = {items:{}}, REG = {};
 
 function autoLine(id){
   const s = STATUS.items?.[id];
@@ -143,7 +145,9 @@ function card(it){
       <span>Sursa: ${esc(it.source)}</span>
       <span>Verificat manual: ${fmt(it.verified)}</span>
       ${autoLine(it.id)}
-      ${it.url ? `<a class="btn" href="${esc(encodeURI(decodeURI(it.url)))}" target="_blank" rel="noopener">Deschide documentul oficial ↗</a>` : ""}
+      ${it.auto_link && REG[it.auto_link] ? `<a class="btn" href="${esc(encodeURI(decodeURI(REG[it.auto_link].url)))}">⬇ Descarcă ultima versiune (Excel${REG[it.auto_link].date ? ", " + esc(REG[it.auto_link].date) : ""})</a>` : ""}
+      ${(it.links||[]).map(l => `<a class="btn btn2" href="${esc(encodeURI(decodeURI(l[1])))}" target="_blank" rel="noopener">${esc(l[0])} ↗</a>`).join("")}
+      ${it.url && !it.links ? `<a class="btn${it.auto_link ? " btn2" : ""}" href="${esc(encodeURI(decodeURI(it.url)))}" target="_blank" rel="noopener">${it.auto_link ? "Pagina de registre ↗" : "Deschide documentul oficial ↗"}</a>` : ""}
     </div>
   </article>`;
 }
@@ -191,6 +195,7 @@ async function getJSON(p){ const r = await fetch(p, {cache:"no-store"}); if(!r.o
   try { DATA = await getJSON("data/resources.json"); }
   catch(e){ $("#content").innerHTML = `<p class="empty">Nu am putut încărca datele. Deschide pagina prin GitHub Pages sau printr-un server local.</p>`; return; }
   try { STATUS = await getJSON("data/status.json"); } catch(e){}
+  try { REG = await getJSON("data/registre.json"); } catch(e){}
   render(); renderJourney();
   $("#autostatus").textContent = STATUS.checked_at
     ? `Ultima verificare automată a surselor: ${fmtTime(STATUS.checked_at)}${STATUS.copsi_reachable === false ? " · copsi.ro nu a răspuns" : ""}`
