@@ -1,131 +1,131 @@
 {
   "items": {
     "norma-atestare": {
-      "checked_at": "2026-11-24T06:17:05Z",
+      "checked_at": "2026-11-25T06:19:06Z",
       "state": "ok",
       "hash": "d44dc3cea70247d1af6b1b59ac3618436de18c68caa785ed60e52e0e56f83eae",
-      "last_ok": "2026-11-24T06:17:05Z",
+      "last_ok": "2026-11-25T06:19:06Z",
       "error": null
     },
     "procedura-depunere-supervizare": {
-      "checked_at": "2026-11-24T06:17:05Z",
+      "checked_at": "2026-11-25T06:19:06Z",
       "state": "ok",
       "hash": "c7cf1577c76c478161772a9cd5ed334983fb9ef6d6295b78a9e6c3666e703aff",
-      "last_ok": "2026-11-24T06:17:05Z",
+      "last_ok": "2026-11-25T06:19:06Z",
       "error": null
     },
     "anexa-1b": {
-      "checked_at": "2026-11-24T06:17:05Z",
+      "checked_at": "2026-11-25T06:19:06Z",
       "state": "ok",
       "hash": "f8c0e7f3cc66487f47d1a68c12701372d6db33cefd56e71c8526b472e212b292",
-      "last_ok": "2026-11-24T06:17:05Z",
+      "last_ok": "2026-11-25T06:19:06Z",
       "error": null
     },
     "anexa-1c": {
-      "checked_at": "2026-11-24T06:17:05Z",
+      "checked_at": "2026-11-25T06:19:06Z",
       "state": "ok",
       "hash": "b221629c145cf97b19bb8bc0fe4214efa4e1d2c29debe7761135e03e20f547bb",
-      "last_ok": "2026-11-24T06:17:05Z",
+      "last_ok": "2026-11-25T06:19:06Z",
       "error": null
     },
     "anexa-1d": {
-      "checked_at": "2026-11-24T06:17:05Z",
+      "checked_at": "2026-11-25T06:19:06Z",
       "state": "ok",
       "hash": "bc5903a41bb18ac5f0bb624c65d9c56ce9add4e9d8cbd134acf5b7a093b46215",
-      "last_ok": "2026-11-24T06:17:05Z",
+      "last_ok": "2026-11-25T06:19:06Z",
       "error": null
     },
     "anexa-1k": {
-      "checked_at": "2026-11-24T06:17:05Z",
+      "checked_at": "2026-11-25T06:19:06Z",
       "state": "ok",
       "hash": "0d6f5375e78c3b742e5f4839c92d8ac1ca7223e64dc4a95a90bb442bf7d4ee30",
-      "last_ok": "2026-11-24T06:17:05Z",
+      "last_ok": "2026-11-25T06:19:06Z",
       "error": null
     },
     "anexa-2a-clinica-autonom": {
-      "checked_at": "2026-11-24T06:17:05Z",
+      "checked_at": "2026-11-25T06:19:06Z",
       "state": "ok",
       "hash": "2fe440a053d63cf5d9dec6d9df9facdd482640cba5f00c4c36a6e3caf586838d",
-      "last_ok": "2026-11-24T06:17:05Z",
+      "last_ok": "2026-11-25T06:19:06Z",
       "error": null
     },
     "anexa-3-schimbare-treapta": {
-      "checked_at": "2026-11-24T06:17:05Z",
+      "checked_at": "2026-11-25T06:19:06Z",
       "state": "ok",
       "hash": "e593c9057073691d2e9facd332cc739a3d5014f164324c90ff667a795a2c7311",
-      "last_ok": "2026-11-24T06:17:05Z",
+      "last_ok": "2026-11-25T06:19:06Z",
       "error": null
     },
     "procedura-registru-supervizori": {
-      "checked_at": "2026-11-24T06:17:05Z",
+      "checked_at": "2026-11-25T06:19:06Z",
       "state": "ok",
       "hash": "7553f33b70d7342465324b5953c4bd5fc6dd62daa024f8fdd7ec1605d5165ecc",
-      "last_ok": "2026-11-24T06:17:05Z",
+      "last_ok": "2026-11-25T06:19:06Z",
       "error": null
     },
     "anexa-4-cabinet-individual": {
-      "checked_at": "2026-11-24T06:17:05Z",
+      "checked_at": "2026-11-25T06:19:06Z",
       "state": "ok",
       "hash": "ed79ecd886a99db06d07a87d94de7a5d16aca5c9a055fe97af0a30a9970c8188",
-      "last_ok": "2026-11-24T06:17:05Z",
+      "last_ok": "2026-11-25T06:19:06Z",
       "error": null
     },
     "anexa-6e-cabinete-asociate": {
-      "checked_at": "2026-11-24T06:17:05Z",
+      "checked_at": "2026-11-25T06:19:06Z",
       "state": "ok",
       "hash": "c9a7694f15fbd9440f8fcfd094fa839ab302f594b761f79c92eac76ca73d9a81",
-      "last_ok": "2026-11-24T06:17:05Z",
+      "last_ok": "2026-11-25T06:19:06Z",
       "error": null
     },
     "anexa-6c-scpp": {
-      "checked_at": "2026-11-24T06:17:05Z",
+      "checked_at": "2026-11-25T06:19:06Z",
       "state": "ok",
       "hash": "8cf87c9771313666252f96f9696953f443491741d3dda5be73aeb9e70c346fd9",
-      "last_ok": "2026-11-24T06:17:05Z",
+      "last_ok": "2026-11-25T06:19:06Z",
       "error": null
     },
     "legea-213-2004": {
-      "checked_at": "2026-11-24T06:17:05Z",
+      "checked_at": "2026-11-25T06:19:06Z",
       "state": "neverificat",
       "error": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     "cod-deontologic": {
-      "checked_at": "2026-11-24T06:17:05Z",
+      "checked_at": "2026-11-25T06:19:06Z",
       "state": "ok",
       "hash": "816b20ea7184c7b393f04a8124edfc855083d76ec2ffa12ac7489dbd337b14cb",
-      "last_ok": "2026-11-24T06:17:05Z",
+      "last_ok": "2026-11-25T06:19:06Z",
       "error": null
     },
     "cod-procedura-disciplinara": {
-      "checked_at": "2026-11-24T06:17:05Z",
+      "checked_at": "2026-11-25T06:19:06Z",
       "state": "ok",
       "hash": "b49263efbcce5f951bdd9219fa563ea2c75ee3d3a49d98638ad7ffbd0d771a11",
-      "last_ok": "2026-11-24T06:17:05Z",
+      "last_ok": "2026-11-25T06:19:06Z",
       "error": null
     },
     "l58-2026": {
-      "checked_at": "2026-11-24T06:17:05Z",
+      "checked_at": "2026-11-25T06:19:06Z",
       "state": "modificat",
       "hash": "60a8f01c81cb0f68b187c892b9d617d588db3b3b222676dcc2e51c6f5deaecf0",
-      "last_ok": "2026-11-24T06:17:05Z",
+      "last_ok": "2026-11-25T06:19:06Z",
       "error": null,
       "changed_at": "2026-11-24T06:17:05Z"
     },
     "taxe-profesionale": {
-      "checked_at": "2026-11-24T06:17:05Z",
+      "checked_at": "2026-11-25T06:19:06Z",
       "state": "ok",
       "hash": "398695065c4400f9c02dead1aa989ae2e963b4a6f8b0142babc1ad4b733dcaab",
-      "last_ok": "2026-11-24T06:17:05Z",
+      "last_ok": "2026-11-25T06:19:06Z",
       "error": null
     },
     "taxe-plata": {
-      "checked_at": "2026-11-24T06:17:05Z",
+      "checked_at": "2026-11-25T06:19:06Z",
       "state": "ok",
       "hash": "bddf36e562880bcdfcdbbcf3aa30d1c7fc5546bf8a58af4a0f5fcef16c77b9a7",
-      "last_ok": "2026-11-24T06:17:05Z",
+      "last_ok": "2026-11-25T06:19:06Z",
       "error": null
     }
   },
   "copsi_reachable": true,
-  "checked_at": "2026-11-24T06:17:05Z"
+  "checked_at": "2026-11-25T06:19:06Z"
 }
