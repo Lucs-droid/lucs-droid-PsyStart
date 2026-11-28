@@ -3363,8 +3363,8 @@ CD
  - opinia Consiliului Fiscal
  - adresa de retragere a iniţiatorului
  - adresa de retragere a iniţiatorului
- - aviz - Comisia pentru drepturile omului, egalitate de şanse, culte şi minorităţi
  - aviz - Comisia pentru afaceri europene
+ - aviz - Comisia pentru drepturile omului, egalitate de şanse, culte şi minorităţi
  - raportul comisiei sesizate în fond
  - adresa prin care iniţiativa legislativă este transmisă la cealaltă Cameră spre dezbatere
 
